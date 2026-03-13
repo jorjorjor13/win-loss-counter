@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+<body style="margin:0;background:transparent;color:white;font-size:48px;font-family:Arial;">
+
+<span id="wins" style="margin-left:80px;">0</span> <span id="losses" style="margin-left:220px;">0</span>
+
+<script>
+let wins = 0;
+let losses = 0;
+
+window.addEventListener("keyup", function(e) {
+
+if (e.code === "F5") {
+wins++;
+document.getElementById("wins").textContent = wins;
+}
+
+if (e.code === "F6") {
+losses++;
+document.getElementById("losses").textContent = losses;
+}
+
+if (e.code === "F7") {
+wins = 0;
+losses = 0;
+document.getElementById("wins").textContent = wins;
+document.getElementById("losses").textContent = losses;
+}
+
+});
+</script>
+
+</body>
+</html>
